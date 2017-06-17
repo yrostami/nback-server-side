@@ -3,7 +3,6 @@ package yrostami.controller;
 import yrostami.service.DataBase;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +12,6 @@ import java.io.IOException;
 /**
  * Created by Yousef.
  */
-@WebServlet(name = "LoginController")
 public class LoginController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException {

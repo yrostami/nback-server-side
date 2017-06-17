@@ -1,7 +1,6 @@
 package yrostami.controller;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +10,6 @@ import java.io.IOException;
 /**
  * Created by Yousef on 06/17/2017.
  */
-@WebServlet(name = "LogoutController")
 public class LogoutController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
             throws ServletException, IOException

@@ -1,10 +1,8 @@
 package yrostami.controller;
 
-import org.apache.commons.codec.binary.Base64;
 import yrostami.service.Service;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,9 +11,9 @@ import java.io.OutputStream;
 import java.util.Date;
 
 /**
- * Created by Yousef on 06/16/2017.
+ * Created by Yousef.
  */
-@WebServlet(name = "ResultsFile")
+
 public class ResultsFile extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res)
