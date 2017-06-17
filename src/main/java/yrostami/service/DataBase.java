@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
  */
 public class DataBase {
 
-    private static ExecutorService executor = Executors.newFixedThreadPool(4);
+    private static ExecutorService executor = Executors.newFixedThreadPool(10);
 
     private static PGSimpleDataSource dataSource = new PGSimpleDataSource();
 
@@ -30,6 +30,8 @@ public class DataBase {
         dataSource.setPortNumber(portNumber);
         dataSource.setUser(user);
         dataSource.setPassword(password);
+        dataSource.setSsl(true);
+        dataSource.setSslfactory("org.postgresql.ssl.NonValidatingFactory");
     }
 
     public static void destroyDatabase() {
