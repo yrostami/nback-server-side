@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yr-nback:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="nback-1.0.war">
+      <element id="artifact" artifact-name="yr-nback:war exploded" />
+    </root>
+  </artifact>
+</component>

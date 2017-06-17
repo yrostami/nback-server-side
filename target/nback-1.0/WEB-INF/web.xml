@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+           version="3.0">
+
+    <context-param>
+        <param-name>databaseName</param-name>
+        <param-value>d8la1hoekf6g55</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>serverName</param-name>
+        <param-value>ec2-54-75-249-162.eu-west-1.compute.amazonaws.com</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>portNumber</param-name>
+        <param-value>5432</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>fcfftetzaxhtas</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>6b01a267790d253896a5d9a03ef253c87ebbb015cfdda01e10066c4356b55ef8</param-value>
+    </context-param>
+
+
+    <session-config>
+        <session-timeout>20</session-timeout>
+        <tracking-mode>COOKIE</tracking-mode>
+    </session-config>
+
+    <icon>
+        <large-icon>favicon.png</large-icon>
+    </icon>
+
+    <listener>
+        <listener-class>yrostami.service.AppContextListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>ResultController</servlet-name>
+        <servlet-class>yrostami.controller.ResultController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>yrostami.controller.LoginController</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ResultsFile</servlet-name>
+        <servlet-class>yrostami.controller.ResultsFile</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>yrostami.controller.LogoutController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResultController</servlet-name>
+        <url-pattern>/result</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ResultsFile</servlet-name>
+        <url-pattern>/resultsfile</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+
+</web-app>

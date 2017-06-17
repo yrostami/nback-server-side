@@ -1,0 +1,192 @@
+@font-face
+{
+    font-family: bmitra;
+    src: url("../font/B_Mitra.ttf");
+}
+
+body
+{
+    direction: rtl;
+    margin: 0px;
+    background-image: url("../image/bodyback.png");
+    background-repeat: repeat;
+    font-family: bmitra;
+}
+
+.main{
+padding: 0px;
+width: 330px;
+background-color: white;
+margin: 0px auto;
+}
+
+.login-form{
+	margin-top: 100px;
+}
+
+.registration-form
+{
+    margin-top: 40px;
+}
+
+#header
+{
+	width: 100%;
+	display: table;
+    padding: 0px;
+    border-width: 0px;
+    color: ivory;
+    margin-bottom: 5%;
+    padding-top: 20px;
+    padding-bottom:20px;
+    background-color:  	rgb(0,171,189);
+}
+
+.icon-container
+{
+	float: right;
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	border-radius: 27px;
+	border: 1px solid #ec3543;
+	background-color: white;
+	color: #ec3543;
+	text-align: center;
+	font-size: 30px;
+	cursor: default;
+}
+
+.icon-container div{
+	padding-top:5px;
+}
+
+#header-title
+{
+	cursor: default;
+	float: right;
+	margin-right: 10px;
+	margin-top: 7px;
+	text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.xyz{
+	display: block;
+	text-align: center;
+	padding-right: 5px;
+	margin: 0px auto;
+}
+
+#content
+{
+    width: 60%;
+    margin:0px auto;
+    padding: 0px;
+}
+
+
+.label
+{
+    width: 100%;
+    display: block;
+    color: rgb(0,121,139);
+    text-align: right;
+    font-size: 18px;
+}
+
+.errorMessage
+{
+    color: red;
+    font-size: 15px;
+}
+
+.textinput
+{
+    width: 100%;
+    height: 30px;
+    padding-right: 5px;
+    margin-top:7px;
+    margin-bottom: 10px;
+    font-family: bmitra;
+    font-size: 18px;
+    border: none;
+    border-top: 2px solid #00abbd;
+    border-bottom: 2px solid #00abbd;
+}
+
+.textinput:focus{
+    background-color: rgba(0,171,189,0.2);
+    border-color: #ec3543;
+    
+}
+
+.error {
+  border-color:red;
+}
+
+.buttonContainer
+{
+width: 50%;
+margin: 0px auto;
+padding: 0px;
+margin-bottom:20px;
+margin-top:20px;
+}
+
+.mini{
+	width: 20%;
+}
+
+.button
+{
+    width: 100%;
+    color: white;
+    font-family: bmitra;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgb(0,171,189);
+    border: none;
+}
+
+.button span{
+	font-size: 15px;
+}
+
+.button:hover
+{
+    background-color: #ec3543;
+    color: white;
+}
+
+#footer
+{
+	width: 100%;
+    background-color: rgb(0,171,189);
+    text-align: center;
+    height: 30px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0px;
+    cursor: default;
+}
+
+.mainPane{
+    padding: 0px;
+    width: 450px;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 180px;
+    padding: 10px;
+    border-bottom: 2px solid rgb(0,171,189);
+    border-top: 2px solid rgb(0,171,189);
+}
+
+.mainPane h3{
+    margin: 0 auto;
+    color: rgb(0,171,189);
+    text-align: center;
+}
