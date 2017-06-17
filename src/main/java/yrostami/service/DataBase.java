@@ -21,15 +21,18 @@ public class DataBase {
 
     private static PGSimpleDataSource dataSource = new PGSimpleDataSource();
 
-    public static void initializeDatabase(String serverName, String databaseName,
-                                           int portNumber, String user, String password)
+    public static void initializeDatabase()
     {
 
-        dataSource.setServerName(serverName);
-        dataSource.setDatabaseName(databaseName);
-        dataSource.setPortNumber(portNumber);
-        dataSource.setUser(user);
-        dataSource.setPassword(password);
+
+        String dbUrl = System.getenv("JDBC_DATABASE_URL");
+
+        dataSource.setUrl(dbUrl);
+//        dataSource.setServerName(serverName);
+//        dataSource.setDatabaseName(databaseName);
+//        dataSource.setPortNumber(portNumber);
+//        dataSource.setUser(user);
+//        dataSource.setPassword(password);
         dataSource.setSsl(true);
         dataSource.setSslfactory("org.postgresql.ssl.NonValidatingFactory");
     }

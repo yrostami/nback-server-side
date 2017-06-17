@@ -5,7 +5,7 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
            version="3.0">
 
-    <context-param>
+    <!--<context-param>
         <param-name>databaseName</param-name>
         <param-value>d8la1hoekf6g55</param-value>
     </context-param>
@@ -28,7 +28,7 @@
     <context-param>
         <param-name>password</param-name>
         <param-value>6b01a267790d253896a5d9a03ef253c87ebbb015cfdda01e10066c4356b55ef8</param-value>
-    </context-param>
+    </context-param>-->
 
 
     <session-config>
