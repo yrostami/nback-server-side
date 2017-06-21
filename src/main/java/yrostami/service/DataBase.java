@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
  */
 public class DataBase {
 
-    private static ExecutorService executor = Executors.newFixedThreadPool(10);
+    private static ExecutorService executor = Executors.newFixedThreadPool(17);
 
     private static PGSimpleDataSource dataSource = new PGSimpleDataSource();
 
@@ -26,15 +26,15 @@ public class DataBase {
 
 
         String dbUrl = System.getenv("JDBC_DATABASE_URL");
-
         dataSource.setUrl(dbUrl);
-//        dataSource.setServerName(serverName);
-//        dataSource.setDatabaseName(databaseName);
-//        dataSource.setPortNumber(portNumber);
-//        dataSource.setUser(user);
-//        dataSource.setPassword(password);
         dataSource.setSsl(true);
         dataSource.setSslfactory("org.postgresql.ssl.NonValidatingFactory");
+
+//        dataSource.setServerName("localhost");
+//        dataSource.setDatabaseName("nback");
+//        dataSource.setPortNumber(5432);
+//        dataSource.setUser("yousef");
+//        dataSource.setPassword("yr00137255");
     }
 
     public static void destroyDatabase() {
