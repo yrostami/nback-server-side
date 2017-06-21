@@ -50,10 +50,11 @@ public class DataBase {
             public void run()
             {
                 String sql = "INSERT INTO result"+
-                        "(fname,lname,sexuality,age,married,education,occupation," +
+                        "(fname,lname,sexuality,age,married,education,state," +
                         "answer_count,correct_answer_count,correct_answer_percent," +
-                        "wrong_answer_count,no_answer_count,time_average,time_standard_deviation) " +
-                        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                        "wrong_answer_count,no_answer_count,time_average,time_standard_deviation," +
+                        "t1n,t1e,t1o,t1a,t1c,t2p1,t2p2,t2p3,t2p4,t2p5,t3f1,t3f2,t3f3,t3f4) " +
+                        "VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 try(Connection con = getConnection();
                     PreparedStatement statement = con.prepareStatement(sql)) {
 
@@ -64,7 +65,7 @@ public class DataBase {
                     statement.setInt(4, result.getAge());
                     statement.setString(5, result.getMarried());
                     statement.setString(6, result.getEducation());
-                    statement.setString(7, result.getOccupation());
+                    statement.setString(7, result.getState());
                     statement.setInt(8, result.getAnswersCount());
                     statement.setInt(9, result.getCorrectAnswersCount());
                     statement.setFloat(10, result.getCorrectAnswersPercent());
@@ -72,6 +73,21 @@ public class DataBase {
                     statement.setInt(12, result.getNoAnswersCount());
                     statement.setInt(13, result.getTimeAverage());
                     statement.setInt(14, result.getTimeStandardDeviation());
+
+                    statement.setInt(15,result.getT1N());
+                    statement.setInt(16,result.getT1E());
+                    statement.setInt(17,result.getT1O());
+                    statement.setInt(18,result.getT1A());
+                    statement.setInt(19,result.getT1C());
+                    statement.setInt(20,result.getT2p1());
+                    statement.setInt(21,result.getT2p2());
+                    statement.setInt(22,result.getT2p3());
+                    statement.setInt(23,result.getT2p4());
+                    statement.setInt(24,result.getT2p5());
+                    statement.setInt(25,result.getT3f1());
+                    statement.setInt(26,result.getT3f2());
+                    statement.setInt(27,result.getT3f3());
+                    statement.setInt(28,result.getT3f4());
 
                     statement.executeUpdate();
                 }catch (SQLException e){
@@ -98,7 +114,7 @@ public class DataBase {
                 result.setAge(rs.getInt("age"));
                 result.setMarried(rs.getString("married"));
                 result.setEducation(rs.getString("education"));
-                result.setOccupation(rs.getString("occupation"));
+                result.setState(rs.getString("state"));
 
                 result.setAnswersCount(rs.getInt("answer_count"));
                 result.setCorrectAnswersCount(rs.getInt("correct_answer_count"));
@@ -107,6 +123,22 @@ public class DataBase {
                 result.setNoAnswersCount(rs.getInt("no_answer_count"));
                 result.setTimeAverage(rs.getInt("time_average"));
                 result.setTimeStandardDeviation(rs.getInt("time_standard_deviation"));
+
+                result.setT1N(rs.getInt("t1n"));
+                result.setT1E(rs.getInt("t1e"));
+                result.setT1O(rs.getInt("t1o"));
+                result.setT1A(rs.getInt("t1a"));
+                result.setT1C(rs.getInt("t1c"));
+                result.setT2p1(rs.getInt("t2p1"));
+                result.setT2p2(rs.getInt("t2p2"));
+                result.setT2p3(rs.getInt("t2p3"));
+                result.setT2p4(rs.getInt("t2p4"));
+                result.setT2p5(rs.getInt("t2p5"));
+                result.setT3f1(rs.getInt("t3f1"));
+                result.setT3f2(rs.getInt("t3f2"));
+                result.setT3f3(rs.getInt("t3f3"));
+                result.setT3f4(rs.getInt("t3f4"));
+
                 list.add(result);
             }
 
